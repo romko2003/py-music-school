@@ -7,8 +7,8 @@ class Musician(models.Model):
     last_name = models.CharField(max_length=63)
     instrument = models.CharField(max_length=63)
     age = models.IntegerField(
-        validators=[MinValueValidator(14,
-        message="We do not accept people under 14")]
+        validators=
+        [MinValueValidator(14, message="We do not accept people under 14")]
     )
     date_of_applying = models.DateField(auto_now_add=True)
 
