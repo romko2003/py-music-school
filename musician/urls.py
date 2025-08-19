@@ -1,3 +1,7 @@
-urlpatterns = []
+from rest_framework.routers import DefaultRouter
+from .views import MusicianViewSet
 
-app_name = "musician"
+router = DefaultRouter()
+router.register(r"musicians", MusicianViewSet, basename="musician")
+
+urlpatterns = router.urls
